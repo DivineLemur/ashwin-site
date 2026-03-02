@@ -30,7 +30,7 @@ const education = [
 
 const skills = [
   'Product Strategy', 'LLM Products', 'User Research',
-  'SQL', 'Python', 'Data Analysis', 'Roadmapping', 'A/B Testing',
+  'Growth & Retention', 'Game Design', 'Data Analysis', 'A/B Testing',
 ];
 
 export default function AboutPage() {
@@ -53,8 +53,7 @@ export default function AboutPage() {
             Currently trying to grow GOT Legends and working on new game 0-1 strategy,  previously led Casino games portfoliio. 
           </p>
           <p style={bioStyle}>
-            I care deeply about building products that are genuinely useful — not just technically
-            impressive. I'm interested in AI products, game design, and the overlap between them.
+            I care deeply about building products that are genuinely useful. I'm interested in AI products, consumer tech, financial markets.
           </p>
           <p style={bioStyle}>
             Outside of work I write here, read voraciously, play football avidely and tinker with side projects.
