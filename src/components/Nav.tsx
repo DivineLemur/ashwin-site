@@ -14,11 +14,11 @@ export default function Nav() {
 
   return (
     <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: 'rgba(250,249,247,0.88)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border)' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 1.5rem', maxWidth: '1100px', margin: '0 auto' }}>
-        <Link href="/" style={{ fontFamily: 'var(--font-editorial)', fontSize: '1.1rem', fontWeight: 400, color: 'var(--text)', textDecoration: 'none', letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
+      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0.8rem 1.5rem 0' }}>
+        <Link href="/" style={{ fontFamily: 'var(--font-editorial)', fontSize: '1.1rem', fontWeight: 400, color: 'var(--text)', textDecoration: 'none', letterSpacing: '-0.02em', display: 'block', marginBottom: '0.5rem' }}>
           Ashwin Revankar
         </Link>
-        <ul style={{ display: 'flex', gap: '1.2rem', listStyle: 'none', margin: 0, padding: 0 }}>
+        <ul style={{ display: 'flex', gap: '1.5rem', listStyle: 'none', margin: 0, padding: '0 0 0.8rem 0', borderTop: '1px solid var(--border)', paddingTop: '0.6rem' }}>
           {links.map(({ href, label }) => {
             const active = pathname.startsWith(href);
             return (
