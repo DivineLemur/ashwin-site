@@ -15,7 +15,7 @@ export default function BlogPage() {
       <p style={labelStyle}>Writing</p>
       <h1 style={headingStyle}>Blog</h1>
       <p style={subStyle}>
-        I write about product management, AI, strategy, and whatever I'm thinking through.
+        I write about product management, AI, strategy, and whatever I am thinking through.
         Roughly one post a month.
       </p>
 
@@ -26,7 +26,6 @@ export default function BlogPage() {
         style={{
           display: 'inline-flex',
           alignItems: 'center',
-          gap: '0.5rem',
           marginTop: '1.2rem',
           fontFamily: 'var(--font-mono)',
           fontSize: '12px',
@@ -37,14 +36,14 @@ export default function BlogPage() {
           paddingBottom: '2px',
         }}
       >
-        Also on Substack
+        {'Also on Substack'}
       </a>
 
       <div style={{ marginTop: '3.5rem' }}>
         {posts.length === 0 ? (
           <div style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '3rem 0', textAlign: 'center' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: 'var(--muted)' }}>
-              First post coming soon.
+              {'First post coming soon.'}
             </p>
           </div>
         ) : (
@@ -114,5 +113,3 @@ const subStyle: React.CSSProperties = {
   maxWidth: '480px',
   lineHeight: '1.8',
 };
-
-
