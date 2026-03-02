@@ -59,7 +59,7 @@ export default function Home() {
           marginBottom: '2.5rem',
         }}
       >
-        Hello there! I'm a Product Manager at Zynga, leading game teams ($XXM+ ARR) for growth and advising on 0-1 new launches.
+        Hello there! I'm a Product Manager at Zynga, leading the GOT Legends team ($XXM+ ARR) and advising on 0-1 new games strategy.
         I build stuff in my free time and sometimes write about it.
       </p>
 
@@ -92,7 +92,7 @@ export default function Home() {
       >
         <div style={{ width: '32px', height: '1px', background: 'var(--border)' }} />
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.06em' }}>
-          Currently open to PM roles at AI companies
+          Observing
         </span>
       </div>
     </div>
