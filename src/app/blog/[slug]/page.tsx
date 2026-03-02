@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { MDXRemote } from 'next-mdx-remote/rsc';
+import { marked } from 'marked';
 import { getPost, getAllPosts } from '@/lib/posts';
 
 interface Props { params: Promise<{ slug: string }>; }
@@ -21,6 +21,7 @@ export default async function PostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+  const html = marked(post!.content);
   return (
     <div style={{ maxWidth: '680px', margin: '0 auto', padding: '8rem 3rem 6rem' }}>
       <Link href="/blog" style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', display: 'inline-flex', marginBottom: '3rem' }}>← Writing</Link>
@@ -41,9 +42,7 @@ export default async function PostPage({ params }: Props) {
         )}
       </header>
       <hr style={{ border: 'none', borderTop: '1px solid var(--border)', marginBottom: '3rem' }} />
-      <article className="prose-custom">
-        <MDXRemote source={post!.content} />
-      </article>
+      <article className="prose-custom" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 }
