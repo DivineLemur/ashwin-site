@@ -18,26 +18,27 @@ export default function BlogPage() {
         I write about product management, AI, strategy, and whatever I'm thinking through.
         Roughly one post a month.
       </p>
-     <a>
-      href="https://substack.com/@ashwinrevankar"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '0.5rem',
-    marginTop: '1.2rem',
-    fontFamily: 'var(--font-mono)',
-    fontSize: '12px',
-    letterSpacing: '0.06em',
-    color: 'var(--accent-warm)',
-    textDecoration: 'none',
-    borderBottom: '1px solid var(--accent-warm)',
-    paddingBottom: '2px',
-  }}
->
-  Also on Substack ↗
-</a>
+
+<a      
+        href="https://substack.com/@ashwinrevankar"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.5rem',
+          marginTop: '1.2rem',
+          fontFamily: 'var(--font-mono)',
+          fontSize: '12px',
+          letterSpacing: '0.06em',
+          color: 'var(--accent-warm)',
+          textDecoration: 'none',
+          borderBottom: '1px solid var(--accent-warm)',
+          paddingBottom: '2px',
+        }}
+      >
+        Also on Substack
+      </a>
 
       <div style={{ marginTop: '3.5rem' }}>
         {posts.length === 0 ? (
