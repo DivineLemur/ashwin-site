@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const links = [
+  { href: '/', label: 'Home' },
   { href: '/projects', label: 'Projects' },
   { href: '/blog', label: 'Writing' },
   { href: '/about', label: 'About' },
@@ -20,7 +21,7 @@ export default function Nav() {
         </Link>
         <ul style={{ display: 'flex', gap: '1.5rem', listStyle: 'none', margin: 0, padding: '0 0 0.8rem 0', borderTop: '1px solid var(--border)', paddingTop: '0.6rem' }}>
           {links.map(({ href, label }) => {
-            const active = pathname.startsWith(href);
+            const active = href === '/' ? pathname === '/' : pathname.startsWith(href);
             return (
               <li key={href}>
                 <Link href={href} style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.09em', textTransform: 'uppercase', color: active ? 'var(--accent-warm)' : 'var(--muted)', textDecoration: 'none' }}>
