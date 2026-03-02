@@ -58,7 +58,7 @@ export default function Home() {
           fontWeight: 500,
         }}
       >
-        I&apos;m a Product Manager at Zynga, scaling <a href="https://www.gameofthroneslegends.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-warm)', textDecoration: 'none', borderBottom: '1px solid var(--accent-warm)' }}>GOT Legends</a> ($XXM+ ARR) and working on AI native <em>new games development</em> strategy (0-1).
+        I&apos;m a <b>Product Manager at Zynga</b>, scaling <a href="https://www.gameofthroneslegends.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-warm)', textDecoration: 'none', borderBottom: '1px solid var(--accent-warm)' }}>GOT Legends</a> ($XXM+ ARR) and working on AI native <em>new games development</em> strategy (0-1).
         Prev led Casino games portfolio for India.
       </p>
 
