@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Geist+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'Geist Mono', 'Courier New', monospace;
+
+  --bg: #faf9f7;
+  --surface: #f3f1ee;
+  --border: #e2ddd8;
+  --text: #1a1917;
+  --muted: #8a8580;
+  --accent: #1a1917;
+  --accent-warm: #c4602a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* Fade up animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.22s; }
+.delay-3 { animation-delay: 0.34s; }
+.delay-4 { animation-delay: 0.46s; }
+.delay-5 { animation-delay: 0.58s; }
+
+/* Prose styles for blog */
+.prose-custom {
+  font-family: var(--font-mono);
+  font-size: 0.93rem;
+  line-height: 1.85;
+  color: #2a2825;
+}
+
+.prose-custom h1,
+.prose-custom h2,
+.prose-custom h3 {
+  font-family: var(--font-editorial);
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 2.5rem 0 1rem;
+}
+
+.prose-custom h1 { font-size: 2.2rem; font-weight: 400; }
+.prose-custom h2 { font-size: 1.6rem; font-weight: 400; }
+.prose-custom h3 { font-size: 1.2rem; font-weight: 500; }
+
+.prose-custom p { margin-bottom: 1.4rem; }
+
+.prose-custom a {
+  color: var(--accent-warm);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-custom code {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.15em 0.4em;
+  font-size: 0.85em;
+  border-radius: 2px;
+}
+
+.prose-custom pre {
+  background: #1a1917;
+  color: #faf9f7;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+
+.prose-custom pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+.prose-custom blockquote {
+  border-left: 2px solid var(--accent-warm);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: var(--muted);
+  font-style: italic;
+  font-family: var(--font-editorial);
+  font-size: 1.15rem;
+}
+
+.prose-custom ul, .prose-custom ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.prose-custom li { margin-bottom: 0.4rem; }
+
+.prose-custom hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3rem 0;
+}
