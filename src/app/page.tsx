@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { CSSProperties } from 'react';
 
 export default function Home() {
   return (
@@ -49,11 +50,12 @@ export default function Home() {
         className="animate-fade-up delay-3"
         style={{
           fontFamily: 'var(--font-mono)',
-          fontSize: '13px',
+          fontSize: '15px',
           color: 'var(--muted)',
           maxWidth: '480px',
           lineHeight: '1.8',
-          marginBottom: '1rem',
+          marginBottom: '1.2rem',
+          fontWeight: 500,
         }}
       >
         I&apos;m a Product Manager at Zynga, scaling <a href="https://www.gameofthroneslegends.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-warm)', textDecoration: 'none', borderBottom: '1px solid var(--accent-warm)' }}>GOT Legends</a> ($XXM+ ARR) and working on AI native <em>new games development</em> strategy (0-1).
@@ -64,11 +66,12 @@ export default function Home() {
         className="animate-fade-up delay-3"
         style={{
           fontFamily: 'var(--font-mono)',
-          fontSize: '13px',
+          fontSize: '15px',
           color: 'var(--muted)',
           maxWidth: '480px',
           lineHeight: '1.8',
           marginBottom: '2.5rem',
+          fontWeight: 500,
         }}
       >
         I build stuff in my free time and sometimes write about it.
@@ -79,7 +82,7 @@ export default function Home() {
           View Projects
         </Link>
         <Link href="/blog" style={btnGhostStyle}>
-          Read Writing
+          Writing
         </Link>
         <a href="/resume.pdf" target="_blank" style={btnGhostStyle}>
           Resume ↗
@@ -104,7 +107,7 @@ export default function Home() {
   );
 }
 
-const btnPrimaryStyle: React.CSSProperties = {
+const btnPrimaryStyle: CSSProperties = {
   display: 'inline-block',
   padding: '0.7rem 1.5rem',
   fontFamily: 'var(--font-mono)',
@@ -119,7 +122,7 @@ const btnPrimaryStyle: React.CSSProperties = {
   transition: 'all 0.2s',
 };
 
-const btnGhostStyle: React.CSSProperties = {
+const btnGhostStyle: CSSProperties = {
   display: 'inline-block',
   padding: '0.7rem 1.5rem',
   fontFamily: 'var(--font-mono)',
