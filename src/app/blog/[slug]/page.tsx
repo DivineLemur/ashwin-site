@@ -36,9 +36,9 @@ export default function BlogPage() {
           borderBottom: '1px solid var(--accent-warm)',
           paddingBottom: '2px',
         }}
-      >
-        Also on Substack
-      </a>
+        >
+          {'Also on Substack'}
+        </a>
 
       <div style={{ marginTop: '3.5rem' }}>
         {posts.length === 0 ? (
