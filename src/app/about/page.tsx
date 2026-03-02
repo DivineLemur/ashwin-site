@@ -9,14 +9,14 @@ const experience = [
   {
     role: 'Product Manager',
     company: 'Zynga',
-    period: '2022 – Present',
-    notes: 'Scaling games across 0→1 and 10→100 growth stages.',
+    period: '2024 – Present',
+    notes: 'Building new games 0→1 / scaling existing games 10→100 stages.',
   },
   {
     role: 'Associate Product Manager',
-    company: 'Previous Company',
-    period: '2020 – 2022',
-    notes: 'Add your previous role details here.',
+    company: 'Head Digital Works (A23)',
+    period: '2022 – 2024',
+    notes: 'Led development of A23 Poker / Worked on Fraud, Retention funnel',
   },
 ];
 
@@ -50,15 +50,14 @@ export default function AboutPage() {
         {/* Left — bio */}
         <div>
           <p style={bioStyle}>
-            Hello there! I'm a Product Manager at Zynga, where I work on scaling games through
-            both 0→1 launches and 10→100 growth stages.
+            Currently trying to grow GOT Legends and new game development strategy,  previously led Casino games portfoliio. 
           </p>
           <p style={bioStyle}>
             I care deeply about building products that are genuinely useful — not just technically
             impressive. I'm interested in AI products, game design, and the overlap between them.
           </p>
           <p style={bioStyle}>
-            Outside of work I write here, read voraciously, and tinker with side projects.
+            Outside of work I write here, read voraciously, play football avidely and tinker with side projects.
           </p>
 
           <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>

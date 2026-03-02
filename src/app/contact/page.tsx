@@ -12,8 +12,7 @@ export default function ContactPage() {
       <h1 style={headingStyle}>Let's talk.</h1>
 
       <p style={subStyle}>
-        I'm currently open to PM roles at AI companies. If you're working on something
-        interesting or just want to talk product and AI, reach out.
+        If you're working on something interesting or just want to talk product and AI, reach out.
       </p>
 
       <div style={{ marginTop: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
