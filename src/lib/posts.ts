@@ -20,7 +20,9 @@ export interface Post extends PostMeta {
 export function getAllPosts(): PostMeta[] {
   if (!fs.existsSync(postsDir)) return [];
 
-  const files = fs.readdirSync(postsDir).filter((f) => f.endsWith('.mdx') || f.endsWith('.md'));
+  const files = fs
+    .readdirSync(postsDir)
+    .filter((f) => f.endsWith('.mdx') || f.endsWith('.md'));
 
   return files
     .map((filename) => {
@@ -33,7 +35,7 @@ export function getAllPosts(): PostMeta[] {
       return {
         slug,
         title: data.title || slug,
-        date: data.date || '',
+        date: data.date ? String(data.date) : '',
         excerpt: data.excerpt || '',
         tags: data.tags || [],
         readingTime,
@@ -45,7 +47,11 @@ export function getAllPosts(): PostMeta[] {
 export function getPost(slug: string): Post | null {
   const mdxPath = path.join(postsDir, `${slug}.mdx`);
   const mdPath = path.join(postsDir, `${slug}.md`);
-  const filePath = fs.existsSync(mdxPath) ? mdxPath : fs.existsSync(mdPath) ? mdPath : null;
+  const filePath = fs.existsSync(mdxPath)
+    ? mdxPath
+    : fs.existsSync(mdPath)
+    ? mdPath
+    : null;
 
   if (!filePath) return null;
 
@@ -56,7 +62,7 @@ export function getPost(slug: string): Post | null {
   return {
     slug,
     title: data.title || slug,
-    date: data.date || '',
+    date: data.date ? String(data.date) : '',
     excerpt: data.excerpt || '',
     tags: data.tags || [],
     content,
