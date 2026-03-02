@@ -27,9 +27,13 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-editorial);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+p, span, li, a, div {
+  font-weight: 500;
 }
 
 ::selection {
