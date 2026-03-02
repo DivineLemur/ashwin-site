@@ -27,7 +27,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-mono);
+  font-family: var(--font-editorial);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -56,7 +56,7 @@ body {
 
 /* Prose styles for blog */
 .prose-custom {
-  font-family: var(--font-mono);
+  font-family: var(--font-editorial);
   font-size: 0.93rem;
   line-height: 1.85;
   color: #2a2825;
