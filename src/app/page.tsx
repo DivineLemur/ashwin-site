@@ -59,7 +59,7 @@ export default function Home() {
           marginBottom: '2.5rem',
         }}
       >
-        Hello there! I'm a Product Manager at Zynga, leading the GOT Legends team ($XXM+ ARR) and advising on 0-1 new games strategy.
+        Hello there! I'm a Product Manager at Zynga, leading the <a href="https://www.gameofthroneslegends.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-warm)', textDecoration: 'none', borderBottom: '1px solid var(--accent-warm)' }}>GOT Legends</a> team ($XXM+ ARR) and advising on AI native new games (0-1) developmentstrategy.
         I build stuff in my free time and sometimes write about it.
       </p>
 
