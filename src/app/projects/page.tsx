@@ -7,28 +7,44 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    name: 'Project One',
-    description:
-      'A short, punchy description of what this project does and why it matters. What problem does it solve? What was the outcome?',
-    tags: ['AI', 'Product', 'B2B'],
+    name: 'Podcast Summarizer',
+    description: (
+      <>
+        Automated podcast summarization system that uses Claude AI to generate editorial-style summaries of podcast episodes daily, deployed with GitHub Actions.
+        <br />
+        <strong>Stack:</strong> Node.js, Claude AI API, GitHub Actions, RSS Parser, Next.js (frontend)
+      </>
+    ),
+    tags: ['AI', 'Audio', 'Consumer_Tech'],
     github: 'https://github.com/',
     live: 'https://example.com',
-    year: '2024',
+    year: '2025',
   },
   {
-    name: 'Project Two',
-    description:
-      'Another project description. Lead with impact — how many users, what metric moved, what was technically or strategically interesting.',
-    tags: ['LLM', 'Prototyping', 'Python'],
+    name: 'Personal Website',
+    description: (
+    <>
+      'Built a minimalist personal website from scratch using Next.js 16, MDX, and Vercel. Features a blog with markdown support, responsive design, and auto-deployment on every git push. Designed with a clean editorial aesthetic using Cormorant Garamond and Geist Mono. 
+      <br />
+      <strong>Stack:</strong> Next.js · TypeScript · Vercel · GitHub',
+      </> 
+     ), 
+    tags: ['Deployment', 'UI'],
     github: 'https://github.com/',
     live: null,
-    year: '2024',
+    year: '2026',
   },
   {
-    name: 'Project Three',
+    name: 'Morning Newsletter Brief',
     description:
-      'Describe the problem space first, then your approach. Great PM portfolios show thinking, not just delivery.',
-    tags: ['Strategy', 'API', 'Growth'],
+    (
+      <>
+        'An automated AI-powered newsletter digest system that transforms your daily Substack newsletters into intelligent 10-minute summaries. Built with Google Apps Script and Claude AI, it automatically fetches, categorizes, and synthesizes newsletters every morning, delivering actionable insights straight to your inbox.' 
+        <br />
+        <strong>Stack:</strong> Google Apps Script · Gmail API · Google Drive API · JavaScript',
+        </> 
+       ),
+    tags: ['Text_ingestion', 'LLM'],
     github: 'https://github.com/',
     live: 'https://example.com',
     year: '2023',
