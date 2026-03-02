@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import type { CSSProperties } from 'react';
 import { getAllPosts } from '@/lib/posts';
 
 export const metadata: Metadata = {
@@ -36,9 +37,8 @@ export default function BlogPage() {
           borderBottom: '1px solid var(--accent-warm)',
           paddingBottom: '2px',
         }}
-        >
-          {'Also on Substack'}
-        </a>
+        
+        >{'Also on Substack'}</a>
 
       <div style={{ marginTop: '3.5rem' }}>
         {posts.length === 0 ? (
@@ -89,7 +89,7 @@ export default function BlogPage() {
   );
 }
 
-const labelStyle: React.CSSProperties = {
+const labelStyle: CSSProperties = {
   fontFamily: 'var(--font-mono)',
   fontSize: '11px',
   letterSpacing: '0.12em',
@@ -98,7 +98,7 @@ const labelStyle: React.CSSProperties = {
   marginBottom: '1rem',
 };
 
-const headingStyle: React.CSSProperties = {
+const headingStyle: CSSProperties = {
   fontFamily: 'var(--font-editorial)',
   fontSize: 'clamp(2rem, 5vw, 3.2rem)',
   fontWeight: 300,
@@ -107,7 +107,7 @@ const headingStyle: React.CSSProperties = {
   marginBottom: '1rem',
 };
 
-const subStyle: React.CSSProperties = {
+const subStyle: CSSProperties = {
   fontFamily: 'var(--font-mono)',
   fontSize: '13px',
   color: 'var(--muted)',

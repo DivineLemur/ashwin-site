@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import type { CSSProperties } from 'react';
 import { getAllPosts } from '@/lib/posts';
 
 export const metadata: Metadata = {
@@ -19,13 +20,14 @@ export default function BlogPage() {
         Roughly one post a month.
       </p>
 
-      
+      <a
         href="https://substack.com/@ashwinrevankar"
         target="_blank"
         rel="noopener noreferrer"
         style={{
           display: 'inline-flex',
           alignItems: 'center',
+          gap: '0.5rem',
           marginTop: '1.2rem',
           fontFamily: 'var(--font-mono)',
           fontSize: '12px',
@@ -88,7 +90,7 @@ export default function BlogPage() {
   );
 }
 
-const labelStyle: React.CSSProperties = {
+const labelStyle: CSSProperties = {
   fontFamily: 'var(--font-mono)',
   fontSize: '11px',
   letterSpacing: '0.12em',
@@ -97,7 +99,7 @@ const labelStyle: React.CSSProperties = {
   marginBottom: '1rem',
 };
 
-const headingStyle: React.CSSProperties = {
+const headingStyle: CSSProperties = {
   fontFamily: 'var(--font-editorial)',
   fontSize: 'clamp(2rem, 5vw, 3.2rem)',
   fontWeight: 300,
@@ -106,7 +108,7 @@ const headingStyle: React.CSSProperties = {
   marginBottom: '1rem',
 };
 
-const subStyle: React.CSSProperties = {
+const subStyle: CSSProperties = {
   fontFamily: 'var(--font-mono)',
   fontSize: '13px',
   color: 'var(--muted)',
