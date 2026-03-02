@@ -13,7 +13,6 @@ export default function Home() {
         padding: '8rem 3rem 6rem',
       }}
     >
-      {/* Label */}
       <p
         className="animate-fade-up delay-1"
         style={{
@@ -28,7 +27,6 @@ export default function Home() {
         Product Manager · Zynga · Builder
       </p>
 
-      {/* Hero heading */}
       <h1
         className="animate-fade-up delay-2"
         style={{
@@ -41,13 +39,27 @@ export default function Home() {
           marginBottom: '2rem',
         }}
       >
-        Hi, I'm{' '}
+        Hi, I&apos;m{' '}
         <span style={{ color: 'var(--accent-warm)', fontStyle: 'italic' }}>
           Ashwin Revankar.
         </span>
       </h1>
 
-      {/* Bio */}
+      <p
+        className="animate-fade-up delay-3"
+        style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: '13px',
+          color: 'var(--muted)',
+          maxWidth: '480px',
+          lineHeight: '1.8',
+          marginBottom: '1rem',
+        }}
+      >
+        I&apos;m a Product Manager at Zynga, scaling <a href="https://www.gameofthroneslegends.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-warm)', textDecoration: 'none', borderBottom: '1px solid var(--accent-warm)' }}>GOT Legends</a> ($XXM+ ARR) and working on AI native <em>new games development</em> strategy (0-1).
+        Prev led Casino games portfolio for India.
+      </p>
+
       <p
         className="animate-fade-up delay-3"
         style={{
@@ -59,12 +71,9 @@ export default function Home() {
           marginBottom: '2.5rem',
         }}
       >
-        I'm a Product Manager at Zynga, scaling <a href="https://www.gameofthroneslegends.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-warm)', textDecoration: 'none', borderBottom: '1px solid var(--accent-warm)' }}>GOT Legends</a> ($XXM+ ARR) and working on AI native <em>new games development strategy(0-1)</em>.
-        <p>Prev led Casino games porfolio for India</p>
         I build stuff in my free time and sometimes write about it.
       </p>
 
-      {/* CTAs */}
       <div className="animate-fade-up delay-4" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
         <Link href="/projects" style={btnPrimaryStyle}>
           View Projects
@@ -72,16 +81,11 @@ export default function Home() {
         <Link href="/blog" style={btnGhostStyle}>
           Read Writing
         </Link>
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          style={btnGhostStyle}
-        >
+        <a href="/resume.pdf" target="_blank" style={btnGhostStyle}>
           Resume ↗
         </a>
       </div>
 
-      {/* Scroll hint */}
       <div
         className="animate-fade-up delay-5"
         style={{

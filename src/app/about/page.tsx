@@ -23,8 +23,8 @@ const experience = [
 const education = [
   {
     degree: 'B.Tech, Computer Science',
-    school: 'Your University',
-    year: '2018',
+    school: 'BITS-Pilani',
+    year: '2022',
   },
 ];
 
@@ -50,7 +50,7 @@ export default function AboutPage() {
         {/* Left — bio */}
         <div>
           <p style={bioStyle}>
-            Currently trying to grow GOT Legends and new game development strategy,  previously led Casino games portfoliio. 
+            Currently trying to grow GOT Legends and working on new game 0-1 strategy,  previously led Casino games portfoliio. 
           </p>
           <p style={bioStyle}>
             I care deeply about building products that are genuinely useful — not just technically
