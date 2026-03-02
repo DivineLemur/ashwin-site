@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
 
 export const metadata: Metadata = {
   title: 'About — Ashwin',
@@ -168,7 +169,7 @@ export default function AboutPage() {
   );
 }
 
-const labelStyle: React.CSSProperties = {
+const labelStyle: CSSProperties = {
   fontFamily: 'var(--font-mono)',
   fontSize: '11px',
   letterSpacing: '0.12em',
@@ -177,7 +178,7 @@ const labelStyle: React.CSSProperties = {
   marginBottom: '1rem',
 };
 
-const headingStyle: React.CSSProperties = {
+const headingStyle: CSSProperties = {
   fontFamily: 'var(--font-editorial)',
   fontSize: 'clamp(2rem, 5vw, 3.2rem)',
   fontWeight: 300,
@@ -185,15 +186,16 @@ const headingStyle: React.CSSProperties = {
   color: 'var(--text)',
 };
 
-const bioStyle: React.CSSProperties = {
+const bioStyle: CSSProperties = {
   fontFamily: 'var(--font-mono)',
-  fontSize: '13px',
+  fontSize: '15px',
   color: 'var(--muted)',
   lineHeight: '1.85',
-  marginBottom: '1rem',
+  marginBottom: '1.1rem',
+  fontWeight: 500,
 };
 
-const resumeSectionLabel: React.CSSProperties = {
+const resumeSectionLabel: CSSProperties = {
   fontFamily: 'var(--font-mono)',
   fontSize: '10px',
   letterSpacing: '0.12em',
@@ -203,7 +205,7 @@ const resumeSectionLabel: React.CSSProperties = {
   fontWeight: 500,
 };
 
-const btnPrimaryStyle: React.CSSProperties = {
+const btnPrimaryStyle: CSSProperties = {
   display: 'inline-block',
   padding: '0.65rem 1.4rem',
   fontFamily: 'var(--font-mono)',
