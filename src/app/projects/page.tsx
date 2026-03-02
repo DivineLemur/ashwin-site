@@ -16,8 +16,7 @@ const projects = [
       </>
     ),
     tags: ['AI', 'Audio', 'Consumer_Tech'],
-    github: 'https://github.com/',
-    live: 'https://example.com',
+    github: 'https://github.com/DivineLemur/podcast-summaries',
     year: '2025',
   },
   {
@@ -30,8 +29,8 @@ const projects = [
       </> 
      ), 
     tags: ['Deployment', 'UI'],
-    github: 'https://github.com/',
-    live: null,
+    github: 'https://github.com/DivineLemur/ashwin-site',
+    live: 'https://ashwinrevankar.com',
     year: '2026',
   },
   {
@@ -39,15 +38,13 @@ const projects = [
     description:
     (
       <>
-        'An automated AI-powered newsletter digest system that transforms your daily Substack newsletters into intelligent 10-minute summaries. Built with Google Apps Script and Claude AI, it automatically fetches, categorizes, and synthesizes newsletters every morning, delivering actionable insights straight to your inbox.' 
+        'An automated AI-powered newsletter digest system that transforms your daily newsletters into intelligent 10-minute summaries. Built with Google Apps Script and Claude AI, it automatically fetches, categorizes, and synthesizes newsletters every morning.' 
         <br />
         <strong>Stack:</strong> Google Apps Script · Gmail API · Google Drive API · JavaScript',
         </> 
        ),
     tags: ['Text_ingestion', 'LLM'],
-    github: 'https://github.com/',
-    live: 'https://example.com',
-    year: '2023',
+    year: '2025',
   },
 ];
 
