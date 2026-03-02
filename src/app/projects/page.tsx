@@ -23,9 +23,9 @@ const projects = [
     name: 'Personal Website',
     description: (
     <>
-      'Built a minimalist personal website from scratch using Next.js 16, MDX, and Vercel. Features a blog with markdown support, responsive design, and auto-deployment on every git push. Designed with a clean editorial aesthetic using Cormorant Garamond and Geist Mono. 
+      Built a minimalist personal website from scratch using Next.js 16, MDX, and Vercel. Features a blog with markdown support, responsive design, and auto-deployment on every git push. Designed with a clean editorial aesthetic using Cormorant Garamond and Geist Mono. 
       <br />
-      <strong>Stack:</strong> Next.js · TypeScript · Vercel · GitHub',
+      <strong>Stack:</strong> Next.js · TypeScript · Vercel · GitHub'
       </> 
      ), 
     tags: ['Deployment', 'UI'],
@@ -38,9 +38,9 @@ const projects = [
     description:
     (
       <>
-        'An automated AI-powered newsletter digest system that transforms your daily newsletters into intelligent 10-minute summaries. Built with Google Apps Script and Claude AI, it automatically fetches, categorizes, and synthesizes newsletters every morning.' 
+        An automated AI-powered newsletter digest system that transforms your daily newsletters into intelligent 10-minute summaries. Built with Google Apps Script and Claude AI, it automatically fetches, categorizes, and synthesizes newsletters every morning.' 
         <br />
-        <strong>Stack:</strong> Google Apps Script · Gmail API · Google Drive API · JavaScript',
+        <strong>Stack:</strong> Google Apps Script · Gmail API · Google Drive API · JavaScript'
         </> 
        ),
     tags: ['Text_ingestion', 'LLM'],

@@ -22,7 +22,7 @@ const experience = [
 
 const education = [
   {
-    degree: 'B.Tech, Computer Science',
+    degree: 'B.Tech, Chemical Engginering',
     school: 'BITS-Pilani',
     year: '2022',
   },
