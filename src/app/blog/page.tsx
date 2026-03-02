@@ -1,122 +1,118 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { getPost, getAllPosts } from '@/lib/posts';
+import { getAllPosts } from '@/lib/posts';
 
-interface Props {
-  params: Promise<{ slug: string }>;
-}
+export const metadata: Metadata = {
+  title: 'Writing — Ashwin',
+  description: 'Thoughts on product, AI, and building things.',
+};
 
-export async function generateStaticParams() {
-  return getAllPosts().map((p) => ({ slug: p.slug }));
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const post = getPost(slug);
-  if (!post) return {};
-  return {
-    title: `${post.title} — Ashwin`,
-    description: post.excerpt,
-  };
-}
-
-export default async function PostPage({ params }: Props) {
-  const { slug } = await params;
-  const post = getPost(slug);
-  if (!post) notFound();
+export default function BlogPage() {
+  const posts = getAllPosts();
 
   return (
-    <div style={{ maxWidth: '680px', margin: '0 auto', padding: '8rem 3rem 6rem' }}>
-      <Link
-        href="/blog"
+    <div style={{ maxWidth: '820px', margin: '0 auto', padding: '8rem 3rem 6rem' }}>
+      <p style={labelStyle}>Writing</p>
+      <h1 style={headingStyle}>Blog</h1>
+      <p style={subStyle}>
+        I write about product management, AI, strategy, and whatever I'm thinking through.
+        Roughly one post a month.
+      </p>
+
+      
+        href="https://substack.com/@ashwinrevankar"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
-          fontFamily: 'var(--font-mono)',
-          fontSize: '11px',
-          letterSpacing: '0.08em',
-          textTransform: 'uppercase',
-          color: 'var(--muted)',
-          textDecoration: 'none',
           display: 'inline-flex',
           alignItems: 'center',
-          gap: '0.4rem',
-          marginBottom: '3rem',
+          gap: '0.5rem',
+          marginTop: '1.2rem',
+          fontFamily: 'var(--font-mono)',
+          fontSize: '12px',
+          letterSpacing: '0.06em',
+          color: 'var(--accent-warm)',
+          textDecoration: 'none',
+          borderBottom: '1px solid var(--accent-warm)',
+          paddingBottom: '2px',
         }}
       >
-        ← Writing
-      </Link>
+        Also on Substack
+      </a>
 
-      <header style={{ marginBottom: '3rem' }}>
-        <div
-          style={{
-            display: 'flex',
-            gap: '1.5rem',
-            marginBottom: '1.5rem',
-            fontFamily: 'var(--font-mono)',
-            fontSize: '11px',
-            color: 'var(--muted)',
-            letterSpacing: '0.06em',
-          }}
-        >
-          <span>
-            {new Date(post!.date).toLocaleDateString('en-US', {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric',
-            })}
-          </span>
-          <span>·</span>
-          <span>{post!.readingTime}</span>
-        </div>
-
-        <h1
-          style={{
-            fontFamily: 'var(--font-editorial)',
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
-            fontWeight: 300,
-            lineHeight: 1.1,
-            letterSpacing: '-0.03em',
-            color: 'var(--text)',
-            marginBottom: '1rem',
-          }}
-        >
-          {post!.title}
-        </h1>
-
-        {post!.excerpt && (
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '14px', color: 'var(--muted)', lineHeight: '1.7' }}>
-            {post!.excerpt}
-          </p>
-        )}
-
-        {post!.tags && post!.tags.length > 0 && (
-          <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1.2rem', flexWrap: 'wrap' }}>
-            {post!.tags.map((tag) => (
-              <span
-                key={tag}
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: '10px',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  padding: '0.2rem 0.65rem',
-                  border: '1px solid var(--border)',
-                  color: 'var(--muted)',
-                }}
-              >
-                {tag}
-              </span>
-            ))}
+      <div style={{ marginTop: '3.5rem' }}>
+        {posts.length === 0 ? (
+          <div style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '3rem 0', textAlign: 'center' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: 'var(--muted)' }}>
+              First post coming soon.
+            </p>
           </div>
+        ) : (
+          posts.map((post, i) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'baseline',
+                gap: '2rem',
+                padding: '1.6rem 0',
+                borderTop: i === 0 ? '1px solid var(--border)' : undefined,
+                borderBottom: '1px solid var(--border)',
+                textDecoration: 'none',
+              }}
+            >
+              <div>
+                <span style={{ fontFamily: 'var(--font-editorial)', fontSize: '1.2rem', fontWeight: 400, color: 'var(--text)', letterSpacing: '-0.01em', display: 'block', marginBottom: '0.3rem' }}>
+                  {post.title}
+                </span>
+                {post.excerpt && (
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--muted)' }}>
+                    {post.excerpt}
+                  </span>
+                )}
+              </div>
+              <div style={{ textAlign: 'right', flexShrink: 0 }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--muted)', display: 'block' }}>
+                  {new Date(post.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+                </span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--border)' }}>
+                  {post.readingTime}
+                </span>
+              </div>
+            </Link>
+          ))
         )}
-      </header>
-
-      <hr style={{ border: 'none', borderTop: '1px solid var(--border)', marginBottom: '3rem' }} />
-
-      <article className="prose-custom">
-        <MDXRemote source={post!.content} />
-      </article>
+      </div>
     </div>
   );
 }
+
+const labelStyle: React.CSSProperties = {
+  fontFamily: 'var(--font-mono)',
+  fontSize: '11px',
+  letterSpacing: '0.12em',
+  textTransform: 'uppercase',
+  color: 'var(--accent-warm)',
+  marginBottom: '1rem',
+};
+
+const headingStyle: React.CSSProperties = {
+  fontFamily: 'var(--font-editorial)',
+  fontSize: 'clamp(2rem, 5vw, 3.2rem)',
+  fontWeight: 300,
+  letterSpacing: '-0.03em',
+  color: 'var(--text)',
+  marginBottom: '1rem',
+};
+
+const subStyle: React.CSSProperties = {
+  fontFamily: 'var(--font-mono)',
+  fontSize: '13px',
+  color: 'var(--muted)',
+  maxWidth: '480px',
+  lineHeight: '1.8',
+};
+
+
